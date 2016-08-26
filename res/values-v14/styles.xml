@@ -17,7 +17,7 @@
     </style>
 
     <style name="ActionBarBaseTheme" parent="@style/Theme.AppCompat.Light">
-        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:actionOverflowButtonStyle">@style/OverflowButton</item>
         <item name="android:actionBarItemBackground">@drawable/actionbar_title_item_background_selector</item>
         <item name="android:actionBarStyle">@style/ActionBarBaseStyle</item>

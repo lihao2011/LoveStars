@@ -3,4 +3,17 @@
 
     <string name="app_name">LoveStars</string>
 
+    <string-array name="news_TabTitle">
+        <item>top</item>
+        <item>shehui</item>
+        <item>guonei</item>
+        <item>guoji</item>
+        <item>yule</item>
+        <item>tiyu</item>
+        <item>junshi</item>
+        <item>keji</item>
+        <item>caijing</item>
+        <item>shishang</item>
+    </string-array>
+
 </resources>

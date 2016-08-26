@@ -69,5 +69,5 @@
         android:layout_width="160dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="#99017FCF" />
+        android:background="#FFFFFF" />
 </android.support.v4.widget.DrawerLayout>

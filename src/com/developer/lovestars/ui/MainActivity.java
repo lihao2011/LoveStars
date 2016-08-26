@@ -5,6 +5,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import com.developer.lovestars.R;
+import com.developer.lovestars.base.BaseActivity;
 import com.developer.lovestars.fragment.ChatFragment;
 import com.developer.lovestars.fragment.HomeFragment;
 import com.developer.lovestars.fragment.MapFragment;
@@ -14,7 +15,6 @@ import com.developer.lovestars.widget.ActionBarDrawerToggle;
 import com.developer.lovestars.widget.DrawerArrowDrawable;
 
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -23,20 +23,18 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewConfiguration;
 import android.view.Window;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity implements
+public class MainActivity extends BaseActivity implements
 		OnCheckedChangeListener, OnClickListener {
 	// ViewPager控件
 	private ViewPager main_viewPager;
@@ -52,7 +50,6 @@ public class MainActivity extends ActionBarActivity implements
 	private ArrayList<Fragment> fragmentList;
 	private DrawerLayout drawer_layout;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
-	private LinearLayout ll_content;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -70,7 +67,6 @@ public class MainActivity extends ActionBarActivity implements
 
 	public void InitView() {
 		drawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
-		ll_content = (LinearLayout) findViewById(R.id.ll_content);
 		rg_tab = (RadioGroup) findViewById(R.id.rg_tab);
 		rb_news = (RadioButton) findViewById(R.id.rb_news);
 		rb_chat = (RadioButton) findViewById(R.id.rb_chat);
@@ -80,7 +76,7 @@ public class MainActivity extends ActionBarActivity implements
 
 		rg_tab.setOnCheckedChangeListener(this);
 
-		drawer_layout.setScrimColor(Color.TRANSPARENT);// 右侧部分背景色设置
+		drawer_layout.setScrimColor(0x40000000);// 设置右侧部分覆盖颜色
 		ActionBar supportActionBar = getSupportActionBar();
 		supportActionBar.setDisplayHomeAsUpEnabled(true);
 		supportActionBar.setHomeButtonEnabled(true);

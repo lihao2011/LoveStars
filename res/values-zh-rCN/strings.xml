@@ -18,4 +18,28 @@
     <string name="add_note">笔记</string>
     <string name="add_team">团队</string>
     
+    <string-array name="news_TabTitle">
+        <item >头条</item>
+        <item >社会</item>
+        <item >国内</item>
+        <item >国际</item>
+        <item >娱乐</item>
+        <item >体育</item>
+        <item >军事</item>
+        <item >科技</item>
+        <item >财经</item>
+        <item >时尚</item>
+    </string-array>
+    
+    <string-array name="notes_TabTitle">
+        <item >首页</item>
+        <item >应用</item>
+        <item >游戏</item>
+        <item >专题</item>
+        <item >推荐</item>
+        <item >分类</item>
+        <item >排行</item>
+    </string-array>
+    
+    
 </resources>
