@@ -2,6 +2,7 @@ package com.developer.lovestars;
 
 import java.util.ArrayList;
 
+import com.developer.lovestars.ui.MainActivity;
 import com.developer.lovestars.utils.CacheUtils;
 import com.developer.lovestars.utils.UiUtils;
 

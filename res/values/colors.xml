@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 常用颜色值 -->
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    
+    <color name="window_background">#EBEBEB</color>
+    <color name="actionbar_item_background_normal">@color/transparent</color>
+    <color name="actionbar_item_background_pressed">#99FFFFFF</color>
+    <color name="actionbar_background">#017FCF</color>
+    
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:showlife="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/actionbar_search"
+        android:icon="@drawable/actionbar_search"
+        android:title="@string/actionbar_search"
+        android:visible="true"
+        showlife:showAsAction="always"/>
+    <item
+        android:id="@+id/actionbar_add_connect"
+        android:icon="@drawable/actionbar_add_connect"
+        android:title="@string/add_blog"
+        android:visible="true"
+        showlife:showAsAction="never"/>
+    <item
+        android:id="@+id/actionbar_add_prise"
+        android:icon="@drawable/actionbar_add_prise"
+        android:title="@string/add_message"
+        android:visible="true"
+        showlife:showAsAction="never"/>
+    <item
+        android:id="@+id/actionbar_add_publish"
+        android:icon="@drawable/actionbar_add_publish"
+        android:title="@string/add_note"
+        android:visible="true"
+        showlife:showAsAction="never"/>
+    <item
+        android:id="@+id/actionbar_add_spread"
+        android:icon="@drawable/actionbar_add_spread"
+        android:title="@string/add_team"
+        android:visible="true"
+        showlife:showAsAction="never"/>
+
+</menu>

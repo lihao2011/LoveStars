@@ -5,4 +5,17 @@
     <string name="began_to_experience">开始体验</string>
     <string name="splash_jump">跳过</string>
 
+    <string-array name="actionbar_add_item">
+        <item >博客</item>
+        <item >消息</item>
+        <item >笔记</item>
+        <item >群组</item>
+    </string-array>
+    
+    <string name="actionbar_search">搜索</string>
+    <string name="add_blog">博客</string>
+    <string name="add_message">消息</string>
+    <string name="add_note">笔记</string>
+    <string name="add_team">团队</string>
+    
 </resources>

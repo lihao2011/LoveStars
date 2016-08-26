@@ -1,10 +1,73 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name" />
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
 
-</RelativeLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_ViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffcedded" />
+
+        <RadioGroup
+            android:id="@+id/rg_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#66cedded"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_news"
+                style="@style/radioButtonStyle"
+                android:checked="true"
+                android:drawableTop="@drawable/rb_news"
+                android:text="新闻" />
+
+            <RadioButton
+                android:id="@+id/rb_chat"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@drawable/rb_chat"
+                android:text="聊天" />
+
+            <RadioButton
+                android:id="@+id/rb_notes"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@drawable/rb_notes"
+                android:text="笔记" />
+
+            <RadioButton
+                android:id="@+id/rb_map"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@drawable/rb_map"
+                android:text="定位" />
+
+            <RadioButton
+                android:id="@+id/rb_home"
+                style="@style/radioButtonStyle"
+                android:drawableTop="@drawable/rb_home"
+                android:text="主页" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/start_drawer"
+        android:layout_width="160dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#99017FCF" />
+</android.support.v4.widget.DrawerLayout>
