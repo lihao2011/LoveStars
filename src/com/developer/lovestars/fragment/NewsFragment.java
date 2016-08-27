@@ -1,19 +1,21 @@
 package com.developer.lovestars.fragment;
 
-import com.developer.lovestars.R;
-import com.developer.lovestars.utils.UiUtils;
-import com.developer.lovestars.widget.PagerSlidingTabStrip;
-
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
-public class NewsFragment extends Fragment {
+import com.developer.lovestars.R;
+import com.developer.lovestars.base.BaseFragment;
+import com.developer.lovestars.utils.UiUtils;
+import com.developer.lovestars.widget.PagerSlidingTabStrip;
+
+public class NewsFragment extends BaseFragment {
 
 	private PagerSlidingTabStrip newsPagerTab;
 	private ViewPager newsViewPager;
@@ -34,7 +36,7 @@ public class NewsFragment extends Fragment {
 		super.onViewCreated(view, savedInstanceState);
 
 		newsTabTitle = UiUtils.getStringArray(R.array.news_TabTitle);
-		
+
 		addTab();
 
 		NewsPagerAdapter newsPagerAdapter = new NewsPagerAdapter();

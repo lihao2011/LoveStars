@@ -7,9 +7,16 @@
 
     <com.developer.lovestars.widget.PagerSlidingTabStrip
         android:id="@+id/news_pagerSlidingTabStrip"
-        lovestars:allowWidthFull="true"
         android:layout_width="match_parent"
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        android:background="#66cedded"
+        lovestars:allowWidthFull="true"
+        lovestars:slidingBlock="@drawable/under_blue_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FF168EFF" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/news_viewPager"

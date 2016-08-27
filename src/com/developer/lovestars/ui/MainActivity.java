@@ -6,6 +6,7 @@ import java.util.ArrayList;
 
 import com.developer.lovestars.R;
 import com.developer.lovestars.base.BaseActivity;
+import com.developer.lovestars.base.BaseFragment;
 import com.developer.lovestars.fragment.ChatFragment;
 import com.developer.lovestars.fragment.HomeFragment;
 import com.developer.lovestars.fragment.MapFragment;
@@ -47,7 +48,7 @@ public class MainActivity extends BaseActivity implements
 	private RadioButton rb_map;
 	private RadioButton rb_home;
 	// 类型为Fragment的动态数组
-	private ArrayList<Fragment> fragmentList;
+	private ArrayList<BaseFragment> fragmentList;
 	private DrawerLayout drawer_layout;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
 
@@ -98,7 +99,7 @@ public class MainActivity extends BaseActivity implements
 	public void InitViewPager() {
 		main_viewPager = (ViewPager) findViewById(R.id.main_ViewPager);
 
-		fragmentList = new ArrayList<Fragment>();
+		fragmentList = new ArrayList<BaseFragment>();
 
 		Fragment newsFragment = new NewsFragment();
 		Fragment chatFragment = new ChatFragment();
@@ -107,11 +108,11 @@ public class MainActivity extends BaseActivity implements
 		Fragment homeFragment = new HomeFragment();
 
 		// 将各Fragment加入数组中
-		fragmentList.add(newsFragment);
-		fragmentList.add(chatFragment);
-		fragmentList.add(notesFragment);
-		fragmentList.add(mapFragment);
-		fragmentList.add(homeFragment);
+		fragmentList.add((BaseFragment) newsFragment);
+		fragmentList.add((BaseFragment) chatFragment);
+		fragmentList.add((BaseFragment) notesFragment);
+		fragmentList.add((BaseFragment) mapFragment);
+		fragmentList.add((BaseFragment) homeFragment);
 
 		// 设置ViewPager的设配器
 		main_viewPager.setAdapter(new MainFragmentPagerAdapter(
@@ -123,12 +124,12 @@ public class MainActivity extends BaseActivity implements
 	}
 
 	public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
-		ArrayList<Fragment> list;
+		ArrayList<BaseFragment> list;
 
 		public MainFragmentPagerAdapter(FragmentManager fm,
-				ArrayList<Fragment> list) {
+				ArrayList<BaseFragment> fragmentList) {
 			super(fm);
-			this.list = list;
+			this.list = fragmentList;
 		}
 
 		@Override
