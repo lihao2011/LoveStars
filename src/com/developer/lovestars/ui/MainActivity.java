@@ -101,18 +101,18 @@ public class MainActivity extends BaseActivity implements
 
 		fragmentList = new ArrayList<BaseFragment>();
 
-		Fragment newsFragment = new NewsFragment();
-		Fragment chatFragment = new ChatFragment();
-		Fragment notesFragment = new NotesFragment();
-		Fragment mapFragment = new MapFragment();
-		Fragment homeFragment = new HomeFragment();
+		NewsFragment newsFragment = new NewsFragment();
+		ChatFragment chatFragment = new ChatFragment();
+		NotesFragment notesFragment = new NotesFragment();
+		MapFragment mapFragment = new MapFragment();
+		HomeFragment homeFragment = new HomeFragment();
 
 		// 将各Fragment加入数组中
-		fragmentList.add((BaseFragment) newsFragment);
-		fragmentList.add((BaseFragment) chatFragment);
-		fragmentList.add((BaseFragment) notesFragment);
-		fragmentList.add((BaseFragment) mapFragment);
-		fragmentList.add((BaseFragment) homeFragment);
+		fragmentList.add(newsFragment);
+		fragmentList.add(chatFragment);
+		fragmentList.add(notesFragment);
+		fragmentList.add(mapFragment);
+		fragmentList.add(homeFragment);
 
 		// 设置ViewPager的设配器
 		main_viewPager.setAdapter(new MainFragmentPagerAdapter(
