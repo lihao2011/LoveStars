@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+@SuppressWarnings("deprecation")
 public class ActionBarDrawerToggle extends android.support.v4.app.ActionBarDrawerToggle {
 
     private static final String TAG = ActionBarDrawerToggle.class.getName();
@@ -29,11 +30,11 @@ public class ActionBarDrawerToggle extends android.support.v4.app.ActionBarDrawe
     protected DrawerArrowDrawable mDrawerImage;
     protected boolean animateEnabled;
 
-    public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, int drawerImageRes, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
+	public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, int drawerImageRes, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
         super(activity, drawerLayout, drawerImageRes, openDrawerContentDescRes, closeDrawerContentDescRes);
     }
 
-    public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, DrawerArrowDrawable drawerImage, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
+	public ActionBarDrawerToggle(Activity activity, DrawerLayout drawerLayout, DrawerArrowDrawable drawerImage, int openDrawerContentDescRes, int closeDrawerContentDescRes) {
         super(activity, drawerLayout, R.drawable.ic_drawer, openDrawerContentDescRes, closeDrawerContentDescRes);
         mActivity = activity;
         mDrawerLayout = drawerLayout;

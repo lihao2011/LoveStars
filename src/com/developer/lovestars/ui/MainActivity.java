@@ -2,16 +2,12 @@ package com.developer.lovestars.ui;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 
 import com.developer.lovestars.R;
 import com.developer.lovestars.base.BaseActivity;
 import com.developer.lovestars.base.BaseFragment;
-import com.developer.lovestars.fragment.ChatFragment;
-import com.developer.lovestars.fragment.HomeFragment;
-import com.developer.lovestars.fragment.MapFragment;
-import com.developer.lovestars.fragment.NewsFragment;
-import com.developer.lovestars.fragment.NotesFragment;
+import com.developer.lovestars.utils.FragmentFactory;
+import com.developer.lovestars.utils.UiUtils;
 import com.developer.lovestars.widget.ActionBarDrawerToggle;
 import com.developer.lovestars.widget.DrawerArrowDrawable;
 
@@ -47,8 +43,6 @@ public class MainActivity extends BaseActivity implements
 	private RadioButton rb_notes;
 	private RadioButton rb_map;
 	private RadioButton rb_home;
-	// 类型为Fragment的动态数组
-	private ArrayList<BaseFragment> fragmentList;
 	private DrawerLayout drawer_layout;
 	private ActionBarDrawerToggle actionBarDrawerToggle;
 
@@ -99,24 +93,9 @@ public class MainActivity extends BaseActivity implements
 	public void InitViewPager() {
 		main_viewPager = (ViewPager) findViewById(R.id.main_ViewPager);
 
-		fragmentList = new ArrayList<BaseFragment>();
-
-		NewsFragment newsFragment = new NewsFragment();
-		ChatFragment chatFragment = new ChatFragment();
-		NotesFragment notesFragment = new NotesFragment();
-		MapFragment mapFragment = new MapFragment();
-		HomeFragment homeFragment = new HomeFragment();
-
-		// 将各Fragment加入数组中
-		fragmentList.add(newsFragment);
-		fragmentList.add(chatFragment);
-		fragmentList.add(notesFragment);
-		fragmentList.add(mapFragment);
-		fragmentList.add(homeFragment);
-
 		// 设置ViewPager的设配器
 		main_viewPager.setAdapter(new MainFragmentPagerAdapter(
-				getSupportFragmentManager(), fragmentList));
+				getSupportFragmentManager()));
 		// 当前为第一个页面
 		main_viewPager.setCurrentItem(0);
 		// ViewPager的页面改变监听器
@@ -124,22 +103,23 @@ public class MainActivity extends BaseActivity implements
 	}
 
 	public class MainFragmentPagerAdapter extends FragmentPagerAdapter {
-		ArrayList<BaseFragment> list;
 
-		public MainFragmentPagerAdapter(FragmentManager fm,
-				ArrayList<BaseFragment> fragmentList) {
+		private String[] radioButtons;
+
+		public MainFragmentPagerAdapter(FragmentManager fm) {
 			super(fm);
-			this.list = fragmentList;
+			radioButtons = UiUtils.getStringArray(R.array.rg_Button);
 		}
 
 		@Override
 		public Fragment getItem(int position) {
-			return list.get(position);
+			BaseFragment fragment = FragmentFactory.getFragment(position);
+			return fragment;
 		}
 
 		@Override
 		public int getCount() {
-			return list.size();
+			return radioButtons.length;
 		}
 	}
 

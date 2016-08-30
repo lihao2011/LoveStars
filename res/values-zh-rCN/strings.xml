@@ -11,6 +11,23 @@
     <string name="add_message">消息</string>
     <string name="add_note">笔记</string>
     <string name="add_team">团队</string>
+
+    <!-- RadioButton string -->
+    <string name="rg_Button_news">新闻</string>
+    <string name="rg_Button_chat">聊天</string>
+    <string name="rg_Button_notes">笔记</string>
+    <string name="rg_Button_map">地图</string>
+    <string name="rg_Button_home">主页</string>
+
+    <!-- RadioButton string-array -->
+    <string-array name="rg_Button">
+        <item>新闻</item>
+        <item>聊天</item>
+        <item>笔记</item>
+        <item>定位</item>
+        <item>主页</item>
+    </string-array>
+
     <!-- news_TabTitle -->
     <string-array name="news_TabTitle">
         <item>头条</item>
@@ -24,6 +41,7 @@
         <item>财经</item>
         <item>时尚</item>
     </string-array>
+    
     <!-- notes_TabTitle -->
     <string-array name="notes_TabTitle">
         <item>已查看</item>
