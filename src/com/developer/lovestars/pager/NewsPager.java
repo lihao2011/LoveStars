@@ -33,6 +33,10 @@ public class NewsPager extends BasePager {
 	private ListView newsPagerList;
 	private String newsTabTitle;
 
+	private NewsBean newsBean;
+	private List<Data> mData;
+	private View view;
+	
 	protected static final int MSG_ERR = 0;
 	protected static final int MSG_SUCC = 1;
 
@@ -58,9 +62,6 @@ public class NewsPager extends BasePager {
 
 		};
 	};
-	private NewsBean newsBean;
-	private List<Data> mData;
-	private View view;
 
 	public NewsPager(Context context, String newsTabTitle) {
 		super(context);

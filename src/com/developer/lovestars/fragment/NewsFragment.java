@@ -23,14 +23,11 @@ public class NewsFragment extends BaseFragment {
 	private ViewPager newsViewPager;
 	private String[] newsTabTitle;
 	private List<NewsPager> newsPagerList;
-	private View view;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		if (view == null) {  
-			view = UiUtils.inflateView(R.layout.fragment_news);
-	    }
+		View view = UiUtils.inflateView(R.layout.fragment_news);
 		newsPagerTab = (PagerSlidingTabStrip) view
 				.findViewById(R.id.news_pagerSlidingTabStrip);
 		newsViewPager = (ViewPager) view.findViewById(R.id.news_viewPager);
