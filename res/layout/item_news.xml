@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:text="卡圈"
-            android:textColor="@android:color/holo_red_light"
+            android:textColor="#017FCF"
             android:textSize="12sp" />
 
         <TextView
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:text="2016-08-24 15:33"
-            android:textColor="@android:color/holo_blue_light"
+            android:textColor="#017FCF"
             android:textSize="12sp" />
     </RelativeLayout>
 

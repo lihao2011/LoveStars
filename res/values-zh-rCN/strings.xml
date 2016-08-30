@@ -28,7 +28,7 @@
         <item>主页</item>
     </string-array>
 
-    <!-- news_TabTitle -->
+   <!-- news_TabTitle -->
     <string-array name="news_TabTitle">
         <item>头条</item>
         <item>社会</item>
@@ -40,7 +40,7 @@
         <item>科技</item>
         <item>财经</item>
         <item>时尚</item>
-    </string-array>
+    </string-array> 
     
     <!-- notes_TabTitle -->
     <string-array name="notes_TabTitle">
