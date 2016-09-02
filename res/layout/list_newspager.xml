@@ -4,12 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
+    <com.developer.lovestars.widget.RefreshListView
         android:divider="#ffcedded"
         android:dividerHeight="1dp"
         android:id="@+id/newsPagerList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </ListView>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

@@ -61,6 +61,7 @@
             android:name=".GuideActivity"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
         </activity>
+        <activity android:name=".ui.NewsWebViewActivity"/>
     </application>
 
 </manifest>
