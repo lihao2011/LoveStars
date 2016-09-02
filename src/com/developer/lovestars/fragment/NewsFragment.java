@@ -44,7 +44,8 @@ public class NewsFragment extends BaseFragment {
 
 		newsPagerList = new ArrayList<NewsPager>();
 		for (int i = 0; i < newsTabTitle.length; i++) {
-			newsPagerList.add(new NewsPager(UiUtils.getContext(),newsTabTitle[i]));
+			newsPagerList.add(new NewsPager(UiUtils.getContext(),
+					newsTabTitle[i]));
 		}
 
 		NewsPagerAdapter newsPagerAdapter = new NewsPagerAdapter();
@@ -77,17 +78,16 @@ public class NewsFragment extends BaseFragment {
 		}
 
 		@Override
-		public void destroyItem(ViewGroup container, int position, Object object) {
-			container.removeView((View) object);
-		}
-
-		@Override
 		public Object instantiateItem(ViewGroup container, int position) {
-			
 			NewsPager newsPager = newsPagerList.get(position);
 			container.addView(newsPager.rootView);
 			newsPager.initData();// 更新布局
 			return newsPager.rootView;
+		}
+
+		@Override
+		public void destroyItem(ViewGroup container, int position, Object object) {
+			container.removeView((View) object);
 		}
 	}
 }

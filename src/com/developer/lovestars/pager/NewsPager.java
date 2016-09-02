@@ -31,12 +31,12 @@ public class NewsPager extends BasePager {
 	private RequestQueue mQueue;
 	private JsonObjectRequest request;
 	private ListView newsPagerList;
-	private String newsTabTitle;
 
 	private NewsBean newsBean;
 	private List<Data> mData;
 	private View view;
-	
+	private String newsTabTitle;
+
 	protected static final int MSG_ERR = 0;
 	protected static final int MSG_SUCC = 1;
 
@@ -53,7 +53,8 @@ public class NewsPager extends BasePager {
 				// newsAdapter.notifyDataSetChanged();
 				break;
 			case MSG_ERR:// 失败
-				Toast.makeText(UiUtils.getContext(), "哥，失败low！！", 0).show();
+				Toast.makeText(UiUtils.getContext(), "哥，失败low！！",
+						Toast.LENGTH_SHORT).show();
 				break;
 
 			default:
@@ -70,6 +71,7 @@ public class NewsPager extends BasePager {
 
 	@Override
 	protected View initView() {
+
 		if (view == null) {
 			view = View.inflate(mContext, R.layout.list_newspager, null);
 		}
@@ -81,8 +83,10 @@ public class NewsPager extends BasePager {
 	@Override
 	public void initData() {
 		super.initData();
+
 		new Thread() {
 			public void run() {
+				Log.d("lihao", "newsTabTitle = " + newsTabTitle);
 				// 访问网络
 				getDataFromServer();
 			}
@@ -93,9 +97,8 @@ public class NewsPager extends BasePager {
 		mQueue = Volley.newRequestQueue(UiUtils.getContext());
 
 		String requestUrl = "http://v.juhe.cn/toutiao/index";
-//		String type = "yule";
-		String type = "shehui";
-		// Log.d("lihao", "" + type);
+		// String type = "yule";
+		String type = "guonei";
 		String key = "12e09f1041415ea93baf19481bd47405";
 		String mUrl = requestUrl + "?type=" + type + "&key=" + key;
 		request = new JsonObjectRequest(Method.GET, mUrl, null,
@@ -103,7 +106,7 @@ public class NewsPager extends BasePager {
 
 					@Override
 					public void onResponse(JSONObject response) {
-						
+
 						String responseStr = response.toString();
 
 						backResponse(responseStr);
@@ -122,10 +125,9 @@ public class NewsPager extends BasePager {
 	protected void backResponse(String responseStr) {
 		Gson gson = new Gson();
 		newsBean = gson.fromJson(responseStr, NewsBean.class);
-		int error_code = newsBean.error_code;// 0
-		String reason = newsBean.reason;// 成功的返回
+		// int error_code = newsBean.error_code;// 0
+		// String reason = newsBean.reason;// 成功的返回
 		mData = newsBean.result.data;
-		Log.d("lihao", "-----------" + mData);
 		// 1.写一个子线程发送消息
 		if (mData == null) {
 			Message msg = Message.obtain();
