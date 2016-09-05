@@ -1,8 +1,8 @@
 package com.developer.lovestars.ui;
 
 import com.developer.lovestars.R;
+import com.developer.lovestars.base.BaseActivity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebSettings;
@@ -10,7 +10,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-public class NewsWebViewActivity extends Activity {
+public class NewsWebViewActivity extends BaseActivity {
 	private WebView wv_news;
 	private ProgressBar pb_progress;
 
@@ -18,7 +18,7 @@ public class NewsWebViewActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.webview_news);
+		setContentView(R.layout.activity_news_webview);
 
 		wv_news = (WebView) findViewById(R.id.wv_news);
 		pb_progress = (ProgressBar) findViewById(R.id.pb_progress);

@@ -17,7 +17,7 @@
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
         android:textSize="16sp"
-        android:textColor="@android:color/holo_orange_light"
+        android:textColor="#017FCF"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:background="@drawable/splash_btn_shape_selecter"

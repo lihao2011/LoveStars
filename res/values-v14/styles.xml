@@ -24,5 +24,4 @@
         <item name="android:dropDownListViewStyle">@style/ListViewDropDown</item>
         <item name="android:itemTextAppearance">@style/OverflowText</item>
     </style>
-
 </resources>

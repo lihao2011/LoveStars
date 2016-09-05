@@ -14,7 +14,9 @@ public class ChatFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+
 		View view = UiUtils.inflateView(R.layout.fragment_chat);
 		return view;
 	}
+
 }
