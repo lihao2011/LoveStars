@@ -16,8 +16,8 @@ import com.developer.lovestars.base.BaseActivity;
 public class RegistActivity extends BaseActivity implements OnClickListener {
 
 	private TextView obtainCode;
-	private static final String APPKEY = "16c2d6e59b146";
-	private static final String APPSECRET = "2ef5d26f7415993fa1873e27908180a4";
+	private static final String APPKEY = "16f517ebe14c4";
+	private static final String APPSECRET = "847835a90cf176b6abb533fc753a483b";
 //	private EventHandler eh;
 
 	@Override
